@@ -35,7 +35,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="1TB-P5-8ya" kind="show" id="Ykv-u0-X0Q"/>
+                                            <segue destination="1TB-P5-8ya" kind="show" id="gz6-Ko-rqy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgq-k1-rZx">
@@ -63,6 +63,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="efA-dt-Y3t"/>
+                    <connections>
+                        <outlet property="LoginButton" destination="Vgq-k1-rZx" id="bDn-TM-Lf0"/>
+                        <outlet property="SignUpButton" destination="hVQ-V1-9u3" id="uBC-yS-Gzl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
