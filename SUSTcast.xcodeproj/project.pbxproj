@@ -10,6 +10,7 @@
 		75075FC5266BE87700658408 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75075FC4266BE87700658408 /* SignUpViewController.swift */; };
 		75075FCA266BE8A500658408 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75075FC9266BE8A500658408 /* LoginViewController.swift */; };
 		75075FCF266BE8BA00658408 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75075FCE266BE8BA00658408 /* HomeViewController.swift */; };
+		7532C23A266C1229005BAE95 /* ForgoPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7532C239266C1229005BAE95 /* ForgoPassViewController.swift */; };
 		7595CAF12614E4D600BBC719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595CAF02614E4D600BBC719 /* AppDelegate.swift */; };
 		7595CAF32614E4D600BBC719 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595CAF22614E4D600BBC719 /* SceneDelegate.swift */; };
 		7595CAF52614E4D600BBC719 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595CAF42614E4D600BBC719 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		75075FC4266BE87700658408 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		75075FC9266BE8A500658408 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75075FCE266BE8BA00658408 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7532C239266C1229005BAE95 /* ForgoPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgoPassViewController.swift; sourceTree = "<group>"; };
 		7595CAED2614E4D600BBC719 /* SUSTcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUSTcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7595CAF02614E4D600BBC719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7595CAF22614E4D600BBC719 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				75075FC4266BE87700658408 /* SignUpViewController.swift */,
 				75075FC9266BE8A500658408 /* LoginViewController.swift */,
 				75075FCE266BE8BA00658408 /* HomeViewController.swift */,
+				7532C239266C1229005BAE95 /* ForgoPassViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7595CAF52614E4D600BBC719 /* ViewController.swift in Sources */,
+				7532C23A266C1229005BAE95 /* ForgoPassViewController.swift in Sources */,
 				7595CAF12614E4D600BBC719 /* AppDelegate.swift in Sources */,
 				75075FC5266BE87700658408 /* SignUpViewController.swift in Sources */,
 				75075FCA266BE8A500658408 /* LoginViewController.swift in Sources */,
