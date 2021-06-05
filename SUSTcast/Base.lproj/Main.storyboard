@@ -34,6 +34,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="1TB-P5-8ya" kind="show" id="Ykv-u0-X0Q"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgq-k1-rZx">
                                         <rect key="frame" x="0.0" y="60" width="334" height="40"/>
@@ -44,6 +47,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="4iV-kS-hix" kind="show" id="hg8-zd-pPG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -72,10 +78,11 @@
                         <viewLayoutGuide key="safeArea" id="ryT-Mq-H6s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wT1-S7-TaJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOV-cQ-f8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597" y="92"/>
+            <point key="canvasLocation" x="1667" y="-638"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="g1G-B6-Cqz">
@@ -87,10 +94,11 @@
                         <viewLayoutGuide key="safeArea" id="g6e-e1-nHs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="EYd-TE-HHx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ok5-ju-bTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2457" y="84"/>
+            <point key="canvasLocation" x="1667" y="86"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="MMI-Ys-KTU">
