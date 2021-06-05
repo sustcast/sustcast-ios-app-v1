@@ -126,8 +126,32 @@
                     <view key="view" contentMode="scaleToFill" id="lpi-d3-ToU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yhi-RY-nbe">
+                                <rect key="frame" x="40" y="738" width="334" height="84"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL ADDRESS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWc-ea-NWF">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeJ-za-obb">
+                                        <rect key="frame" x="0.0" y="54" width="334" height="30"/>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.83529411760000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2VP-jV-Rvl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2VP-jV-Rvl" firstAttribute="trailing" secondItem="yhi-RY-nbe" secondAttribute="trailing" constant="40" id="6L1-Be-zdD"/>
+                            <constraint firstItem="2VP-jV-Rvl" firstAttribute="bottom" secondItem="yhi-RY-nbe" secondAttribute="bottom" constant="40" id="ga5-o6-yKJ"/>
+                            <constraint firstItem="yhi-RY-nbe" firstAttribute="leading" secondItem="2VP-jV-Rvl" secondAttribute="leading" constant="40" id="vDu-Ni-ijA"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAJ-Z1-zJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
