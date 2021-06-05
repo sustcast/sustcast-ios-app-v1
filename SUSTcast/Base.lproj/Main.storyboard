@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3DZ-KV-SPn">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -77,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="arj-Sq-Q2X">
-                                <rect key="frame" x="40" y="643.5" width="334" height="178.5"/>
+                                <rect key="frame" x="40" y="643.66666666666663" width="334" height="178.33333333333337"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5x-Ja-IX7">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
@@ -90,17 +90,20 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-vl-RPB">
-                                        <rect key="frame" x="0.0" y="108" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="108" width="334" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSa-fe-LNi">
-                                        <rect key="frame" x="0.0" y="148.5" width="334" height="30"/>
+                                        <rect key="frame" x="0.0" y="148.33333333333337" width="334" height="30"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.83529411760000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="login:" destination="4iV-kS-hix" eventType="touchUpInside" id="i4B-2A-gzm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -114,6 +117,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wT1-S7-TaJ"/>
+                    <connections>
+                        <outlet property="email" destination="g5x-Ja-IX7" id="e97-is-Nlx"/>
+                        <outlet property="forgotPass" destination="cmh-vl-RPB" id="fbf-o9-Yd7"/>
+                        <outlet property="loginButton" destination="eSa-fe-LNi" id="HFq-ZY-8Kf"/>
+                        <outlet property="password" destination="SQ6-ae-C3J" id="TS1-Hq-cpS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOV-cQ-f8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,7 +199,7 @@
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15x-ho-993">
                                         <rect key="frame" x="0.0" y="180" width="334" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="F6E-8S-vep"/>
+                                            <constraint firstAttribute="height" constant="40" id="ZD1-GQ-4LQ"/>
                                         </constraints>
                                     </pickerView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oSW-Wi-tKR">
@@ -218,6 +227,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signupFunc:" destination="1TB-P5-8ya" eventType="touchUpInside" id="Grc-f3-UFZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -239,6 +251,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EYd-TE-HHx"/>
+                    <connections>
+                        <outlet property="confirmPass" destination="luC-Ir-SV2" id="gGh-ad-cR4"/>
+                        <outlet property="department" destination="15x-ho-993" id="Vtd-za-Ray"/>
+                        <outlet property="emailAddress" destination="qyp-p8-AJn" id="LVp-lh-T15"/>
+                        <outlet property="password" destination="oSW-Wi-tKR" id="Uj4-6Z-fg8"/>
+                        <outlet property="phoneNumber" destination="ebL-95-h3g" id="OOq-fO-lVS"/>
+                        <outlet property="signUP" destination="cGr-Gz-kU1" id="dUl-Tb-a3Z"/>
+                        <outlet property="userName" destination="QfQ-cl-qXK" id="00A-4k-4pB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ok5-ju-bTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,20 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var userName: UITextField!
+    
+    @IBOutlet weak var emailAddress: UITextField!
+    
+    @IBOutlet weak var phoneNumber: UITextField!
+    
+    @IBOutlet weak var department: UIPickerView!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBOutlet weak var confirmPass: UITextField!
+    
+    @IBOutlet weak var signUP: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,4 +40,6 @@ class SignUpViewController: UIViewController {
     }
     */
 
+    @IBAction func signupFunc(_ sender: Any) {
+    }
 }
