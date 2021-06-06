@@ -21,6 +21,8 @@
 		7595CAFD2614E4D800BBC719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7595CAFB2614E4D800BBC719 /* LaunchScreen.storyboard */; };
 		7595CB082614E4D900BBC719 /* SUSTcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595CB072614E4D900BBC719 /* SUSTcastTests.swift */; };
 		7595CB132614E4D900BBC719 /* SUSTcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595CB122614E4D900BBC719 /* SUSTcastUITests.swift */; };
+		75F8F18E266CF26400EDE3ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75F8F18D266CF26400EDE3ED /* GoogleService-Info.plist */; };
+		7E76F46F98E3A74724349C24 /* Pods_SUSTcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6440F74923418A7D7C30EF54 /* Pods_SUSTcast.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6440F74923418A7D7C30EF54 /* Pods_SUSTcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUSTcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75075FC4266BE87700658408 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		75075FC9266BE8A500658408 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75075FCE266BE8BA00658408 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 		7595CB0E2614E4D900BBC719 /* SUSTcastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUSTcastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7595CB122614E4D900BBC719 /* SUSTcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUSTcastUITests.swift; sourceTree = "<group>"; };
 		7595CB142614E4D900BBC719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F8F18D266CF26400EDE3ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A0F5F5430B50E455DD04C2DC /* Pods-SUSTcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUSTcast.debug.xcconfig"; path = "Target Support Files/Pods-SUSTcast/Pods-SUSTcast.debug.xcconfig"; sourceTree = "<group>"; };
+		BDB0AA26702ADFF654521C15 /* Pods-SUSTcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUSTcast.release.xcconfig"; path = "Target Support Files/Pods-SUSTcast/Pods-SUSTcast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E76F46F98E3A74724349C24 /* Pods_SUSTcast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +124,7 @@
 				7595CB112614E4D900BBC719 /* SUSTcastUITests */,
 				7595CAEE2614E4D600BBC719 /* Products */,
 				90C0EDE90ACA64AADAC106DE /* Pods */,
+				D1E431C9521799C72A8BB13F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +141,7 @@
 		7595CAEF2614E4D600BBC719 /* SUSTcast */ = {
 			isa = PBXGroup;
 			children = (
+				75F8F18D266CF26400EDE3ED /* GoogleService-Info.plist */,
 				7532C23E266C1FAE005BAE95 /* Utils */,
 				75075FD3266BE8C200658408 /* View Controllers */,
 				7595CAF02614E4D600BBC719 /* AppDelegate.swift */,
@@ -166,8 +175,18 @@
 		90C0EDE90ACA64AADAC106DE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				A0F5F5430B50E455DD04C2DC /* Pods-SUSTcast.debug.xcconfig */,
+				BDB0AA26702ADFF654521C15 /* Pods-SUSTcast.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D1E431C9521799C72A8BB13F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6440F74923418A7D7C30EF54 /* Pods_SUSTcast.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7595CB172614E4D900BBC719 /* Build configuration list for PBXNativeTarget "SUSTcast" */;
 			buildPhases = (
+				01E5ED9004D1F45D21E07D70 /* [CP] Check Pods Manifest.lock */,
 				7595CAE92614E4D600BBC719 /* Sources */,
 				7595CAEA2614E4D600BBC719 /* Frameworks */,
 				7595CAEB2614E4D600BBC719 /* Resources */,
+				62DB17114B8182BEE0BFFA31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7595CAFD2614E4D800BBC719 /* LaunchScreen.storyboard in Resources */,
+				75F8F18E266CF26400EDE3ED /* GoogleService-Info.plist in Resources */,
 				7595CAFA2614E4D800BBC719 /* Assets.xcassets in Resources */,
 				7595CAF82614E4D600BBC719 /* Main.storyboard in Resources */,
 			);
@@ -295,6 +317,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01E5ED9004D1F45D21E07D70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SUSTcast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62DB17114B8182BEE0BFFA31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SUSTcast/Pods-SUSTcast-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SUSTcast/Pods-SUSTcast-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SUSTcast/Pods-SUSTcast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7595CAE92614E4D600BBC719 /* Sources */ = {
@@ -482,6 +546,7 @@
 		};
 		7595CB182614E4D900BBC719 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0F5F5430B50E455DD04C2DC /* Pods-SUSTcast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -500,6 +565,7 @@
 		};
 		7595CB192614E4D900BBC719 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDB0AA26702ADFF654521C15 /* Pods-SUSTcast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

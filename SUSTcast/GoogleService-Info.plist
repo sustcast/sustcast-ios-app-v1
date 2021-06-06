@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>911091727898-c6nkkk41g4kb9a3odjuivriiche7pvsp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.911091727898-c6nkkk41g4kb9a3odjuivriiche7pvsp</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>911091727898-56taajmjgg1v2uhqoquojrum4nvk4djo.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCpo4_SfiW_xfqmM9BmJEAWsK7AyzN9ahY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>911091727898</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sust.sustcast</string>
+	<key>PROJECT_ID</key>
+	<string>sustcast-android-app-v1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sustcast-android-app-v1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:911091727898:ios:14c3285411c5b37a4f9ba3</string>
+	<key>DATABASE_URL</key>
+	<string>https://sustcast-android-app-v1.firebaseio.com</string>
+</dict>
+</plist>
