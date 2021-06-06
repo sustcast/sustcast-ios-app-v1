@@ -8,5 +8,7 @@
 import Foundation
 
 struct Constants {
-    
+    struct StoryboardId {
+        static let homeViewController = "HomeViewC"
+    }
 }

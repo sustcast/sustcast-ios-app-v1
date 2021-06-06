@@ -272,12 +272,26 @@
         <!--Home View Controller-->
         <scene sceneID="MMI-Ys-KTU">
             <objects>
-                <viewController id="6BI-zm-BWl" customClass="HomeViewController" customModule="SUSTcast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewC" id="6BI-zm-BWl" customClass="HomeViewController" customModule="SUSTcast" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aba-BI-Ed5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWA-Ij-qO7">
+                                <rect key="frame" x="40" y="84" width="334" height="738"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eF3-t3-xac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LWA-Ij-qO7" firstAttribute="leading" secondItem="eF3-t3-xac" secondAttribute="leading" constant="40" id="F4Q-3Q-3Hu"/>
+                            <constraint firstItem="LWA-Ij-qO7" firstAttribute="top" secondItem="eF3-t3-xac" secondAttribute="top" constant="40" id="ggU-cB-01o"/>
+                            <constraint firstItem="eF3-t3-xac" firstAttribute="trailing" secondItem="LWA-Ij-qO7" secondAttribute="trailing" constant="40" id="pEW-Ux-ZEq"/>
+                            <constraint firstItem="eF3-t3-xac" firstAttribute="bottom" secondItem="LWA-Ij-qO7" secondAttribute="bottom" constant="40" id="umf-sd-txu"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAT-7Y-0XU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
