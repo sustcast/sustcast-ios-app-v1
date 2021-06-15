@@ -1,21 +1,21 @@
 //
-//  HomeViewController.swift
+//  AboutViewController.swift
 //  SUSTcast
 //
-//  Created by Abrar on 6/5/21.
+//  Created by Abrar on 6/15/21.
 //
 
 import UIKit
-import Toaster
 
-class HomeViewController: UITabBarController {
+class AboutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        Toast(text: "Home").show()
+        view.backgroundColor = .blue
+
     }
     
 
