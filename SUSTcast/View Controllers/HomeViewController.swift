@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toaster
 
 class HomeViewController: UIViewController {
 
@@ -13,6 +14,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        Toast(text: "Home").show()
     }
     
 
