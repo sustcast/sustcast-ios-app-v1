@@ -6,26 +6,31 @@
 //
 
 import UIKit
+import Firebase
 
 class StreamViewController: UIViewController {
+    
+    var ref: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        ref = Database.database().reference().child("song")
+
         
-        view.backgroundColor = .red
-    }
+        self.ref.child("title_show").observeSingleEvent(of: .value, with: { (snapshot) in
+        if let title = snapshot.value as?  String {
+        print("The value from the database: \(title)")
+        }
+        else{
+            print("Error")
+        }
+        })
+        
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        //self.ref.child("IcecastServer").obser
+    
     }
-    */
 
 }

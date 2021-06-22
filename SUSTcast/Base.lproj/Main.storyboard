@@ -290,6 +290,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EYd-TE-HHx"/>
                     <connections>
+                        <outlet property="Depts" destination="15x-ho-993" id="bCT-J3-Sk6"/>
                         <outlet property="confirmPass" destination="luC-Ir-SV2" id="gGh-ad-cR4"/>
                         <outlet property="department" destination="15x-ho-993" id="Vtd-za-Ray"/>
                         <outlet property="emailAddress" destination="qyp-p8-AJn" id="LVp-lh-T15"/>
@@ -343,8 +344,19 @@
                     <view key="view" contentMode="scaleToFill" id="bFI-tE-FJw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kpA-Wo-qgt">
+                                <rect key="frame" x="40" y="84" width="334" height="689"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="liY-SC-fbj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="liY-SC-fbj" firstAttribute="trailing" secondItem="kpA-Wo-qgt" secondAttribute="trailing" constant="40" id="7fw-ku-Eir"/>
+                            <constraint firstItem="liY-SC-fbj" firstAttribute="bottom" secondItem="kpA-Wo-qgt" secondAttribute="bottom" constant="40" id="OTd-Ok-4gZ"/>
+                            <constraint firstItem="kpA-Wo-qgt" firstAttribute="leading" secondItem="liY-SC-fbj" secondAttribute="leading" constant="40" id="Ue9-ZZ-Zav"/>
+                            <constraint firstItem="kpA-Wo-qgt" firstAttribute="top" secondItem="liY-SC-fbj" secondAttribute="top" constant="40" id="oxX-VJ-gKl"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="onj-5V-qDI"/>
                 </viewController>
