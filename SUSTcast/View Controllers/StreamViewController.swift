@@ -7,10 +7,12 @@
 
 import UIKit
 import Firebase
+import AVFoundation
 
 class StreamViewController: UIViewController {
     
     var ref: DatabaseReference!
+    var player: AVPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,19 @@ class StreamViewController: UIViewController {
         }
         })
         
+        
+       // var playing : Bool? = false
+        let urlString = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        guard let url = URL.init(string: urlString)
+               else {
+                   return
+           }
+           let playerItem = AVPlayerItem.init(url: url)
+           player = AVPlayer.init(playerItem: playerItem)
+    
+           player.play()
+           print("Playing")
+       
     
         //self.ref.child("IcecastServer").obser
     
