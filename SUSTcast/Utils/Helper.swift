@@ -33,5 +33,13 @@ class Helper{
         button.layer.cornerRadius = 25.0
     }
     
+    static func reachable(host: String) -> Bool {
+        var res: UnsafeMutablePointer<addrinfo>?
+        let n = getaddrinfo(host, nil, nil, &res)
+        freeaddrinfo(res)
+        return n == 0
+    }
+   
+    
     
 }

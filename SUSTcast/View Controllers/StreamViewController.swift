@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import AVFoundation
+import Toaster
 
 class StreamViewController: UIViewController {
     
@@ -29,6 +30,16 @@ class StreamViewController: UIViewController {
             print("Error")
         }
         })
+        
+        var isConnectedToInternet: Bool { Helper.reachable(host: "apple.com") }
+        
+        if(isConnectedToInternet){
+            Toast(text: "Network available").show()
+
+        } else{
+            Toast(text: "No internet").show()
+
+        }
         
         
        // var playing : Bool? = false
