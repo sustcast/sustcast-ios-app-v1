@@ -51,8 +51,8 @@ class StreamViewController: UIViewController {
            let playerItem = AVPlayerItem.init(url: url)
            player = AVPlayer.init(playerItem: playerItem)
     
-           player.play()
-           print("Playing")
+           //player.play()
+           //print("Playing")
        
     
         //self.ref.child("IcecastServer").obser
