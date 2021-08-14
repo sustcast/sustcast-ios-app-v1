@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Toaster
 
 
 class LoginViewController: UIViewController {
@@ -20,7 +21,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgotPass: UILabel!
     
     @IBOutlet weak var loginButton: UIButton!
-    
+        
+    @IBOutlet weak var back: UIImageView!
     
     
     override func viewDidLoad() {
@@ -40,16 +42,22 @@ class LoginViewController: UIViewController {
             
             if error != nil {
                 // Error
+                
+                Toast(text: "There's no account").show()
             } else {
                 let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.StoryboardId.homeViewController) as? HomeViewController
                 self.view.window?.rootViewController = homeViewController
                 self.view.window?.makeKeyAndVisible()
+                
+                Toast(text: "Login sucessful").show()
             }
             
         }
         
         
      }
+    
+    
      
 
 }

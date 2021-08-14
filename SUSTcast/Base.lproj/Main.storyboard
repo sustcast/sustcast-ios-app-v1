@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SUSTcast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewC" id="BYZ-38-t0r" customClass="ViewController" customModule="SUSTcast" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,6 +115,10 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AVB-CG-5z1">
+                                <rect key="frame" x="0.0" y="95" width="89" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ryT-Mq-H6s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -126,6 +130,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wT1-S7-TaJ"/>
                     <connections>
+                        <outlet property="back" destination="AVB-CG-5z1" id="PeU-f5-mkE"/>
                         <outlet property="email" destination="g5x-Ja-IX7" id="e97-is-Nlx"/>
                         <outlet property="forgotPass" destination="cmh-vl-RPB" id="fbf-o9-Yd7"/>
                         <outlet property="loginButton" destination="eSa-fe-LNi" id="HFq-ZY-8Kf"/>
@@ -134,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOV-cQ-f8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="-638"/>
+            <point key="canvasLocation" x="1666.6666666666667" y="-638.16964285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OPp-z6-UJe">
@@ -218,7 +223,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3eY-qR-Yab">
-                                <rect key="frame" x="40" y="368" width="334" height="454"/>
+                                <rect key="frame" x="40" y="374" width="334" height="448"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USER NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QfQ-cl-qXK">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -238,30 +243,29 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15x-ho-993">
-                                        <rect key="frame" x="0.0" y="180" width="334" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="ZD1-GQ-4LQ"/>
-                                        </constraints>
-                                    </pickerView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oSW-Wi-tKR">
-                                        <rect key="frame" x="0.0" y="240" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="180" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DEPARTMENT" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lMf-x4-FBv">
+                                        <rect key="frame" x="0.0" y="234" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CONFIRM PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="luC-Ir-SV2">
-                                        <rect key="frame" x="0.0" y="294" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="288" width="334" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zc-pg-TCg">
-                                        <rect key="frame" x="0.0" y="354" width="336" height="40"/>
+                                        <rect key="frame" x="0.0" y="348" width="336" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="bDM-Nu-17t"/>
                                         </constraints>
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGr-Gz-kU1">
-                                        <rect key="frame" x="0.0" y="414" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="408" width="334" height="40"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.83529411760000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="k5v-gG-fca"/>
@@ -277,6 +281,8 @@
                                 <constraints>
                                     <constraint firstItem="ebL-95-h3g" firstAttribute="height" secondItem="QfQ-cl-qXK" secondAttribute="height" id="6da-FT-6Dh"/>
                                     <constraint firstItem="qyp-p8-AJn" firstAttribute="height" secondItem="QfQ-cl-qXK" secondAttribute="height" id="ZM0-jm-eVs"/>
+                                    <constraint firstItem="lMf-x4-FBv" firstAttribute="width" secondItem="oSW-Wi-tKR" secondAttribute="width" id="bbi-dL-dYx"/>
+                                    <constraint firstItem="lMf-x4-FBv" firstAttribute="height" secondItem="oSW-Wi-tKR" secondAttribute="height" id="mUK-zj-WeJ"/>
                                     <constraint firstItem="luC-Ir-SV2" firstAttribute="height" secondItem="QfQ-cl-qXK" secondAttribute="height" id="yEQ-jc-dF5"/>
                                 </constraints>
                             </stackView>
@@ -294,9 +300,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="EYd-TE-HHx"/>
                     <connections>
-                        <outlet property="Depts" destination="15x-ho-993" id="bCT-J3-Sk6"/>
                         <outlet property="confirmPass" destination="luC-Ir-SV2" id="gGh-ad-cR4"/>
-                        <outlet property="department" destination="15x-ho-993" id="Vtd-za-Ray"/>
+                        <outlet property="departments" destination="lMf-x4-FBv" id="SqD-f7-4sS"/>
                         <outlet property="emailAddress" destination="qyp-p8-AJn" id="LVp-lh-T15"/>
                         <outlet property="password" destination="oSW-Wi-tKR" id="Uj4-6Z-fg8"/>
                         <outlet property="phoneNumber" destination="ebL-95-h3g" id="OOq-fO-lVS"/>
@@ -335,7 +340,7 @@
                         <viewLayoutGuide key="safeArea" id="FjL-Rq-Vdi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="ZMc-uo-teW"/>
+                    <tabBarItem key="tabBarItem" title="" image="Stream" id="ZMc-uo-teW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7M8-71-33q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,6 +392,8 @@
     </scenes>
     <resources>
         <image name="Icon" width="144" height="144"/>
+        <image name="Stream" width="144" height="144"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

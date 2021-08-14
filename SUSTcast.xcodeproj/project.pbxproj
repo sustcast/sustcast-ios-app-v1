@@ -25,6 +25,8 @@
 		7595CAFD2614E4D800BBC719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7595CAFB2614E4D800BBC719 /* LaunchScreen.storyboard */; };
 		7595CB082614E4D900BBC719 /* SUSTcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595CB072614E4D900BBC719 /* SUSTcastTests.swift */; };
 		7595CB132614E4D900BBC719 /* SUSTcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595CB122614E4D900BBC719 /* SUSTcastUITests.swift */; };
+		75EBA73826C83B1E00B3D4F3 /* LoadBalancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBA73726C83B1E00B3D4F3 /* LoadBalancer.swift */; };
+		75EBA73E26C83BEC00B3D4F3 /* IceUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBA73D26C83BEC00B3D4F3 /* IceUrl.swift */; };
 		75F8F18E266CF26400EDE3ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75F8F18D266CF26400EDE3ED /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		7595CB0E2614E4D900BBC719 /* SUSTcastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUSTcastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7595CB122614E4D900BBC719 /* SUSTcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUSTcastUITests.swift; sourceTree = "<group>"; };
 		7595CB142614E4D900BBC719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75EBA73726C83B1E00B3D4F3 /* LoadBalancer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadBalancer.swift; sourceTree = "<group>"; };
+		75EBA73D26C83BEC00B3D4F3 /* IceUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IceUrl.swift; path = SUSTcast/IceUrl.swift; sourceTree = SOURCE_ROOT; };
 		75F8F18D266CF26400EDE3ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DBA85F876270060044D3EC4 /* Pods-SUSTcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUSTcast.release.xcconfig"; path = "Target Support Files/Pods-SUSTcast/Pods-SUSTcast.release.xcconfig"; sourceTree = "<group>"; };
 		CFCF4F28D6D9A6343C7EC9C5 /* Pods_SUSTcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUSTcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,8 +123,10 @@
 		7532C23E266C1FAE005BAE95 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				75EBA73D26C83BEC00B3D4F3 /* IceUrl.swift */,
 				7532C247266C2003005BAE95 /* Helper.swift */,
 				7532C24C266C201E005BAE95 /* Constants.swift */,
+				75EBA73726C83B1E00B3D4F3 /* LoadBalancer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EBA73826C83B1E00B3D4F3 /* LoadBalancer.swift in Sources */,
 				7580D3262679005400E9E5AE /* StreamViewController.swift in Sources */,
 				7595CAF52614E4D600BBC719 /* ViewController.swift in Sources */,
 				7532C23A266C1229005BAE95 /* ForgoPassViewController.swift in Sources */,
@@ -386,6 +393,7 @@
 				75075FCF266BE8BA00658408 /* HomeViewController.swift in Sources */,
 				7532C248266C2003005BAE95 /* Helper.swift in Sources */,
 				7532C24D266C201E005BAE95 /* Constants.swift in Sources */,
+				75EBA73E26C83BEC00B3D4F3 /* IceUrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

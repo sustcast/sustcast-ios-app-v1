@@ -15,7 +15,6 @@ class HomeViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
         
-        Toast(text: "Home").show()
     }
     
 

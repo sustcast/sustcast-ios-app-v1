@@ -6,51 +6,69 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Toaster
 
-class SignUpViewController: UIViewController, UIPickerViewDelegate {
+
+class SignUpViewController: UIViewController {
 
     @IBOutlet weak var userName: UITextField!
     
     @IBOutlet weak var emailAddress: UITextField!
     
     @IBOutlet weak var phoneNumber: UITextField!
-    
-    @IBOutlet weak var department: UIPickerView!
-    
+        
     @IBOutlet weak var password: UITextField!
     
     @IBOutlet weak var confirmPass: UITextField!
     
     @IBOutlet weak var signUP: UIButton!
     
+    @IBOutlet weak var departments: UITextField!
     
     @IBOutlet weak var Depts: UIPickerView!
     
-    var pickerData: [String] = [String]()
+    let departmentsList = ["ANP", "ARC", "BMB", "BNG", "BUS", "CEE", "CEP", "CHE", "CSE", "ECO", "EEE", "ENG", "FES", "FET", "GEB", "GEE", "IPE", "MAT", "MEE", "OCG", "PAD", "PHY", "PME", "PSS", "SCW", "SOC", "STA", "SWE"]
+    
+    var PickerView = UIPickerView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        //pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
+        PickerView.delegate = self
+        PickerView.dataSource = self
 
+        departments.inputView = PickerView
         
         Helper.RoundButton(signUP)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func signupFunc(_ sender: Any) {
+        let selectedDepartment = departments.text!
+        Toast(text: selectedDepartment).show()
     }
+}
+
+extension SignUpViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1  }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return departmentsList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+       return departmentsList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        departments.text = departmentsList[row]
+        departments.resignFirstResponder()
+    }
+    
+    
 }
