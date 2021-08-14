@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import Toaster
+import Firebase
 
 
 class SignUpViewController: UIViewController {
@@ -43,11 +44,73 @@ class SignUpViewController: UIViewController {
         
         Helper.RoundButton(signUP)
     }
+    
+    
+    func validateFields() -> Bool {
+        
+        if (userName.text! == "" ||
+            emailAddress.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || confirmPass.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            
+            return true
+        }
+        
+        return false
+    }
 
     @IBAction func signupFunc(_ sender: Any) {
+        
+        let error = validateFields()
+        
         let selectedDepartment = departments.text!
-        Toast(text: selectedDepartment).show()
+        let name = userName.text!
+        let email = emailAddress.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let phone = phoneNumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let pass = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if(error){
+            
+            Toast(text: "Please fill up all the fileds!").show()
+            
+        } else {
+            
+            Auth.auth().createUser(withEmail: email, password: pass) { (result, err) in
+                
+                if (err != nil) {
+                    //Error
+                    Toast(text: "Error creating user").show()
+                } else {
+                    
+                    let db = Firestore.firestore()
+                    
+                    db.collection("sustcast_user").addDocument(data: ["userName": name, "department": selectedDepartment, "emailAddress":email, "phoneNumber":phone,"authenticated":false, "uid":result!.user.uid ]) {
+                        (error) in
+                        
+                        if error != nil {
+                            
+                        }
+                    }
+                    
+                    
+                    //transition
+                    
+                    let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.StoryboardId.homeViewController) as? HomeViewController
+                    self.view.window?.rootViewController = homeViewController
+                    self.view.window?.makeKeyAndVisible()
+                    
+                    Toast(text: "Register sucessful").show()
+                    
+                    
+                    
+                }
+            }
+        }
+        
+        
+        
     }
+    
+    
+    
 }
 
 extension SignUpViewController: UIPickerViewDelegate, UIPickerViewDataSource{
