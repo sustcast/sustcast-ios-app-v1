@@ -11,7 +11,7 @@ import Toaster
 import Firebase
 
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userName: UITextField!
     
@@ -36,7 +36,14 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        userName.delegate = self
+        emailAddress.delegate = self
+        phoneNumber.delegate = self
+        password.delegate = self
+        confirmPass.delegate = self
+        departments.delegate = self
         PickerView.delegate = self
         PickerView.dataSource = self
 
@@ -44,6 +51,38 @@ class SignUpViewController: UIViewController {
         
         Helper.RoundButton(signUP)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userName {
+           textField.resignFirstResponder()
+           emailAddress.becomeFirstResponder()
+        } else if textField == emailAddress {
+           textField.resignFirstResponder()
+           phoneNumber.becomeFirstResponder()
+        } else if textField == phoneNumber {
+           textField.resignFirstResponder()
+            password.becomeFirstResponder()
+        }
+        else if textField == password {
+           textField.resignFirstResponder()
+           confirmPass.becomeFirstResponder()
+            
+        }
+        else if textField == confirmPass {
+           textField.resignFirstResponder()
+            departments.becomeFirstResponder()
+            
+        }
+        else if textField == departments {
+           textField.resignFirstResponder()
+        
+            
+        }
+        
+       return true
+      }
+    
+    
     
     
     func validateFields() -> Bool {

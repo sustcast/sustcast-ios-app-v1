@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import AVFoundation
 import Toaster
 import  MediaPlayer
@@ -45,11 +46,13 @@ class StreamViewController: UIViewController {
 
         }
         
+        print("Test" + Auth.auth().currentUser!.uid)
+
         
        // var playing : Bool? = false
        // let urlString = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-        let urlString = "http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8"
-        //let urlString = "http://aler.org:8000/radiorunacunapac.ogg.m3u"
+        //let urlString = "http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8"
+        let urlString = "http://aler.org:8000/radiorunacunapac.ogg.m3u"
         
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
