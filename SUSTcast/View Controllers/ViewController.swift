@@ -33,41 +33,41 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
-//        authListener = Auth.auth().addStateDidChangeListener({ (auth, user) in
-            
-            
-            
-            
-            
-        }
-//        )
+        
+        //        authListener = Auth.auth().addStateDidChangeListener({ (auth, user) in
         
         
-
-//        print("Test" + Auth.auth().currentUser!.uid)
-//
-//       Auth.auth().addStateDidChangeListener { auth, user in
-//        if((user) != nil){
-//            let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.StoryboardId.homeViewController) as? HomeViewController
-//            self.view.window?.rootViewController = homeViewController
-//            self.view.window?.makeKeyAndVisible()
-//        }
-//        else {
-//            Helper.RoundButton(self.SignUpButton)
-//            Helper.RoundButton(self.LoginButton)
-//        }
-//            }
-//        if((Auth.auth().currentUser?.uid) != nil) {
-//
-//
-//
-//
-//        }
-       
         
-
+        
+        
     }
+    //        )
+    
+    
+    
+    //        print("Test" + Auth.auth().currentUser!.uid)
+    //
+    //       Auth.auth().addStateDidChangeListener { auth, user in
+    //        if((user) != nil){
+    //            let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.StoryboardId.homeViewController) as? HomeViewController
+    //            self.view.window?.rootViewController = homeViewController
+    //            self.view.window?.makeKeyAndVisible()
+    //        }
+    //        else {
+    //            Helper.RoundButton(self.SignUpButton)
+    //            Helper.RoundButton(self.LoginButton)
+    //        }
+    //            }
+    //        if((Auth.auth().currentUser?.uid) != nil) {
+    //
+    //
+    //
+    //
+    //        }
+    
+    
+    
+}
 
 
 

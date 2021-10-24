@@ -11,7 +11,7 @@ import Toaster
 
 
 class LoginViewController: UIViewController {
-
+    
     
     @IBOutlet weak var email: UITextField!
     
@@ -21,17 +21,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgotPass: UILabel!
     
     @IBOutlet weak var loginButton: UIButton!
-        
+    
     @IBOutlet weak var back: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-     @IBAction func login(_ sender: Any) {
+    @IBAction func login(_ sender: Any) {
         
         
         let mail = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -55,9 +55,9 @@ class LoginViewController: UIViewController {
         }
         
         
-     }
+    }
     
     
-     
-
+    
+    
 }

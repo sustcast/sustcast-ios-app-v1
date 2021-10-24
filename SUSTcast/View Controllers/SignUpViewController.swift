@@ -12,13 +12,13 @@ import Firebase
 
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var userName: UITextField!
     
     @IBOutlet weak var emailAddress: UITextField!
     
     @IBOutlet weak var phoneNumber: UITextField!
-        
+    
     @IBOutlet weak var password: UITextField!
     
     @IBOutlet weak var confirmPass: UITextField!
@@ -46,7 +46,37 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         departments.delegate = self
         PickerView.delegate = self
         PickerView.dataSource = self
-
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
+    
+    /*  UIKeyboardWillShowNotification. */
+    @objc internal func keyboardWillShow(_ notification : Notification?) -> Void {
+        
+        var _kbSize:CGSize!
+        
+        if let info = notification?.userInfo {
+            
+            let frameEndUserInfoKey = UIResponder.keyboardFrameEndUserInfoKey
+            
+            //  Getting UIKeyboardSize.
+            if let kbFrame = info[frameEndUserInfoKey] as? CGRect {
+                
+                let screenSize = UIScreen.main.bounds
+                
+                //Calculating actual keyboard displayed size, keyboard frame may be different when hardware keyboard is attached (Bug ID: #469) (Bug ID: #381)
+                let intersectRect = kbFrame.intersection(screenSize)
+                
+                if intersectRect.isNull {
+                    _kbSize = CGSize(width: screenSize.size.width, height: 0)
+                } else {
+                    _kbSize = intersectRect.size
+                }
+                print("Your Keyboard Size \(_kbSize)")
+            }
+        }
+        
         departments.inputView = PickerView
         
         Helper.RoundButton(signUP)
@@ -54,48 +84,69 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userName {
-           textField.resignFirstResponder()
-           emailAddress.becomeFirstResponder()
+            textField.resignFirstResponder()
+            emailAddress.becomeFirstResponder()
         } else if textField == emailAddress {
-           textField.resignFirstResponder()
-           phoneNumber.becomeFirstResponder()
+            textField.resignFirstResponder()
+            phoneNumber.becomeFirstResponder()
         } else if textField == phoneNumber {
-           textField.resignFirstResponder()
+            textField.resignFirstResponder()
             password.becomeFirstResponder()
         }
+        
+        else if textField == departments {
+            textField.resignFirstResponder()
+            password.becomeFirstResponder()
+            
+        }
         else if textField == password {
-           textField.resignFirstResponder()
-           confirmPass.becomeFirstResponder()
+            textField.resignFirstResponder()
+            confirmPass.becomeFirstResponder()
             
         }
         else if textField == confirmPass {
-           textField.resignFirstResponder()
-            departments.becomeFirstResponder()
-            
-        }
-        else if textField == departments {
-           textField.resignFirstResponder()
-        
-            
+            textField.resignFirstResponder()
         }
         
-       return true
-      }
+        return true
+    }
     
+    func animateTextField(textField: UITextField, up: Bool) {
+        
+        let movementDistance:CGFloat = -160
+        let movementDuration: Double = 0.3
+        
+        var movement:CGFloat = 0
+        if up {
+            movement = movementDistance
+        } else {
+            movement = -movementDistance
+        }
+        
+        UIView.animate(withDuration: movementDuration, delay: 0, options: [.beginFromCurrentState], animations: {
+            self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        }, completion: nil)
+    }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        animateTextField(textField: textField, up:true)
+    }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        animateTextField(textField: textField, up:false)
+    }
     
     func validateFields() -> Bool {
         
         if (userName.text! == "" ||
-            emailAddress.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || confirmPass.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+                emailAddress.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || confirmPass.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
             
             return true
         }
         
         return false
     }
-
+    
     @IBAction func signupFunc(_ sender: Any) {
         
         let error = validateFields()
@@ -164,7 +215,7 @@ extension SignUpViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-       return departmentsList[row]
+        return departmentsList[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
