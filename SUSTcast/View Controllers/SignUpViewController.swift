@@ -173,7 +173,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     
                     let db = Firestore.firestore()
                     
-                    db.collection("sustcast_user").addDocument(data: ["userName": name, "department": selectedDepartment, "emailAddress":email, "phoneNumber":phone,"authenticated":false, "uid":result!.user.uid ]) {
+                    db.collection("sustcast_user").document(result!.user.uid)
+                        .setData(["userName": name, "department": selectedDepartment, "emailAddress":email, "phoneNumber":phone,"authenticated":false, "uid":result!.user.uid ]) {
                         (error) in
                         
                         if error != nil {

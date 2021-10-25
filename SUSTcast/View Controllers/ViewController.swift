@@ -17,17 +17,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var SignUpButton: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
-        if Auth.auth().currentUser != nil {
-            let user = Auth.auth().currentUser
-            print("Im here" + (user?.email)!)
-            
-            let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.StoryboardId.homeViewController) as? HomeViewController
-            self.view.window?.rootViewController = homeViewController
-            self.view.window?.makeKeyAndVisible()
-        } else {
+//        if Auth.auth().currentUser != nil {
+//            let user = Auth.auth().currentUser
+//            print("Im here" + (user?.email)!)
+//
+//            let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.StoryboardId.homeViewController) as? HomeViewController
+//            self.view.window?.rootViewController = homeViewController
+//            self.view.window?.makeKeyAndVisible()
+//        } else {
             Helper.RoundButton(self.SignUpButton)
             Helper.RoundButton(self.LoginButton)
-        }
+//        }
     }
     
     
