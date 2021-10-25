@@ -94,11 +94,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             password.becomeFirstResponder()
         }
         
-        else if textField == departments {
-            textField.resignFirstResponder()
-            password.becomeFirstResponder()
-            
-        }
+//        else if textField == departments {
+//            textField.resignFirstResponder()
+//            password.becomeFirstResponder()
+//
+//        }
+        
         else if textField == password {
             textField.resignFirstResponder()
             confirmPass.becomeFirstResponder()
